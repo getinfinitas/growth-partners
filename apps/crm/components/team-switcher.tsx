@@ -68,7 +68,7 @@ export function TeamSwitcher({
               Teams
             </DropdownMenuLabel>
             {teams.map((team, index) => {
-            const TeamLogo = team.logo  // Add this line
+            const TeamLogo = team.logo 
             return (
             <DropdownMenuItem
               key={team.name}
@@ -76,7 +76,7 @@ export function TeamSwitcher({
               className="gap-2 p-2"
             >
       <div className="flex size-6 items-center justify-center rounded-sm border">
-        <TeamLogo className="size-4 shrink-0" />  {/* Change this line */}
+        <TeamLogo className="size-4 shrink-0" />  
       </div>
       {team.name}
       <DropdownMenuShortcut>⌘{index + 1}</DropdownMenuShortcut>
