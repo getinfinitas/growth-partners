@@ -6,7 +6,6 @@ const nextConfig = {
   outputFileTracingRoot: '/Users/aaronklein/infinitas/growth-partners',
   output: 'standalone',
   trailingSlash: false,
-  generateStaticParams: false,
   images: {
     remotePatterns: [
       {
