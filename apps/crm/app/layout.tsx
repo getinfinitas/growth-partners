@@ -2,7 +2,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { AppSidebar } from '@/components/app-sidebar';
+import { ClientAppSidebar } from '@/components/client-app-sidebar';
 import {
   SidebarInset,
   SidebarProvider,
@@ -11,9 +11,6 @@ import {
 import { Separator } from '@/components/ui/separator';
 import type { Metadata } from 'next';
 import './globals.css';
-
-// Force dynamic rendering to avoid pre-rendering issues with icons
-export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +33,7 @@ export default function RootLayout({
     <html lang='en' className={GeistSans.className}>
       <body className="antialiased" suppressHydrationWarning>
         <SidebarProvider>
-          <AppSidebar />
+          <ClientAppSidebar />
           <SidebarInset>
             <main className="flex flex-1 flex-col gap-4">
               {children}
