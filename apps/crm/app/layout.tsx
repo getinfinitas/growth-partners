@@ -1,5 +1,3 @@
-import { GeistSans } from 'geist/font/sans'
-import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppSidebar } from '@/components/app-sidebar';
@@ -11,12 +9,26 @@ import {
 import { Separator } from '@/components/ui/separator';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Geist as Geist, Geist_Mono as Geist_Mono, Source_Serif_4 as Source_Serif_4 } from 'next/font/google'
+import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google';
 
+// Configure fonts
+const geist = Geist({ 
+  subsets: ['latin'], 
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-sans',
+});
 
-const _geist = Geist({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _geistMono = Geist_Mono({ subsets: ['latin'], weight: ["100","200","300","400","500","600","700","800","900"] })
-const _sourceSerif_4 = Source_Serif_4({ subsets: ['latin'], weight: ["200","300","400","500","600","700","800","900"] })
+const geistMono = Geist_Mono({ 
+  subsets: ['latin'], 
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-mono',
+});
+
+const sourceSerif4 = Source_Serif_4({ 
+  subsets: ['latin'], 
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-serif',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -36,8 +48,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={inter.variable}>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+    <html 
+      lang='en' 
+      className={`${geist.variable} ${geistMono.variable} ${sourceSerif4.variable}`}
+    >
+      <body className={`${geist.className} antialiased`} suppressHydrationWarning>
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
@@ -56,5 +71,7 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
+  );
+}
   );
 }
