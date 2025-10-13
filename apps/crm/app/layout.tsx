@@ -2,7 +2,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { AppSidebar } from '@/components/app-sidebar';
+import { ClientAppSidebar } from '@/components/client-app-sidebar';
 import {
   SidebarInset,
   SidebarProvider,
@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang='en' className={GeistSans.className}>
       <body className="antialiased" suppressHydrationWarning>
         <SidebarProvider>
-          <AppSidebar />
+          <ClientAppSidebar />
           <SidebarInset>
             <main className="flex flex-1 flex-col gap-4">
               {children}
