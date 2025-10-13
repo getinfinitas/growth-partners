@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className={GeistSans.variable}>
-      <body className={`${GeistSans.className} antialiased`} suppressHydrationWarning>
+    <html lang='en' className={GeistSans.className}>
+      <body className="antialiased" suppressHydrationWarning>
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
