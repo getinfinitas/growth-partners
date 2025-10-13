@@ -1,3 +1,5 @@
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppSidebar } from '@/components/app-sidebar';
@@ -9,23 +11,6 @@ import {
 import { Separator } from '@/components/ui/separator';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Geist, Geist_Mono, Source_Serif_4 } from 'next/font/google';
-
-// Configure fonts
-const geist = Geist({ 
-  subsets: ['latin'], 
-  variable: '--font-sans',
-});
-
-const geistMono = Geist_Mono({ 
-  subsets: ['latin'], 
-  variable: '--font-mono',
-});
-
-const sourceSerif4 = Source_Serif_4({ 
-  subsets: ['latin'], 
-  variable: '--font-serif',
-});
 
 export const metadata: Metadata = {
   title: {
@@ -41,16 +26,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html 
-      lang="en" 
-      className={`${geist.variable} ${geistMono.variable} ${sourceSerif4.variable}`}
-      suppressHydrationWarning
-    >
-      <body className={geist.className} suppressHydrationWarning>
+    <html lang='en' className={GeistSans.variable}>
+      <body className={`${GeistSans.className} antialiased`} suppressHydrationWarning>
         <SidebarProvider>
           <AppSidebar />
           <SidebarInset>
