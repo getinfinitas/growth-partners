@@ -36,7 +36,7 @@ export default function RootLayout({
     <html lang='en' className={GeistSans.className}>
       <body className="antialiased" suppressHydrationWarning>
         <SidebarProvider>
-          <ClientAppSidebar />
+          <AppSidebar />
           <SidebarInset>
             <main className="flex flex-1 flex-col gap-4">
               {children}
