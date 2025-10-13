@@ -1,4 +1,5 @@
 "use client"
+import * as React from "react"
 import {
   Folder,
   Forward,
@@ -44,7 +45,7 @@ export function NavProjects({
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton asChild>
                 <a href={item.url}>
-                  {React.createElement(Icon, {}) as React.ReactNode}
+                  <Icon />
                   <span>{item.name}</span>
                 </a>
               </SidebarMenuButton>
