@@ -3,8 +3,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
-  outputFileTracingRoot: '/Users/aaronklein/infinitas/growth-partners',
-  output: 'standalone',
+  poweredByHeader: false,
   trailingSlash: false,
   images: {
     remotePatterns: [
