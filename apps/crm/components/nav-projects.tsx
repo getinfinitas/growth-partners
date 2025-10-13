@@ -44,7 +44,7 @@ export function NavProjects({
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton asChild>
                 <a href={item.url}>
-                  <Icon />
+                  {React.createElement(Icon)}
                   <span>{item.name}</span>
                 </a>
               </SidebarMenuButton>
