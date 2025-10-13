@@ -12,6 +12,9 @@ import { Separator } from '@/components/ui/separator';
 import type { Metadata } from 'next';
 import './globals.css';
 
+// Force dynamic rendering to avoid pre-rendering issues with icons
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Infinitas CRM',
