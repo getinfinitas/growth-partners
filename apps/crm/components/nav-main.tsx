@@ -35,7 +35,7 @@ export function NavMain({
       <SidebarGroupLabel>Platform</SidebarGroupLabel>
       <SidebarMenu>
         {items.map((item) => {
-          const Icon = item.icon
+          const Icon = item.icon;
           return (
             <Collapsible
               key={item.title}
