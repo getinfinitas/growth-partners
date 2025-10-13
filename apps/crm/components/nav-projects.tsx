@@ -39,7 +39,7 @@ export function NavProjects({
       <SidebarGroupLabel>Projects</SidebarGroupLabel>
       <SidebarMenu>
         {projects.map((item) => {
-          const Icon = item.icon
+          const Icon = item.icon;
           return (
             <SidebarMenuItem key={item.name}>
               <SidebarMenuButton asChild>
