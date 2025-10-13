@@ -1,0 +1,32 @@
+{
+  "name": "infinitas",
+  "private": true,
+  "description": "Infinitas - Streamline your business relationships and unlock Google Business Profile potential. Manage contacts, track interactions, and grow your local presence—all in one intelligent platform.",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "turbo build",
+    "build:analyze": "turbo build:analyze",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "clean": "turbo clean",
+    "type-check": "turbo type-check",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "db:generate": "turbo db:generate",
+    "db:push": "turbo db:push",
+    "db:migrate": "turbo db:migrate"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.0.0",
+    "turbo": "^2.0.0",
+    "prettier": "^3.3.0",
+    "typescript": "^5.5.0"
+  },
+  "packageManager": "npm@10.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
