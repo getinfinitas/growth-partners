@@ -1,11 +1,6 @@
 import { GeistSans } from 'geist/font/sans';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { AppSidebar } from '@/components/app-sidebar';
-import {
-  SidebarInset,
-  SidebarProvider,
-} from '@/components/ui/sidebar';
 import type { Metadata } from 'next';
 import './globals.css';
 
@@ -32,18 +27,12 @@ export default function RootLayout({
   return (
     <html lang='en' className={GeistSans.className}>
       <body className="antialiased" suppressHydrationWarning>
-        <SidebarProvider>
-          <AppSidebar />
-          <SidebarInset>
-            <main className="flex flex-1 flex-col gap-4">
-              {children}
-            </main>
-          </SidebarInset>
-        </SidebarProvider>
+        {children}
         <Analytics />
         <SpeedInsights />
       </body>
     </html>
   );
 }
+
 
