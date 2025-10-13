@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['geist'],
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  outputFileTracingRoot: '/Users/aaronklein/infinitas/growth-partners',
+  output: 'standalone',
   images: {
     remotePatterns: [
       {
@@ -15,3 +16,4 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
