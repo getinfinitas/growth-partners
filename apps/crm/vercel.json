@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "buildCommand": "cd ../.. && npx turbo run build --filter=@infinitas/crm",
+  "installCommand": "npm install --prefix=../..",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
   "headers": [
     {
       "source": "/(.*)",
@@ -11,4 +15,3 @@
     }
   ]
 }
-
