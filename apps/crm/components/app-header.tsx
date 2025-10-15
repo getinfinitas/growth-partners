@@ -24,7 +24,7 @@ interface AppHeaderProps {
 
 export function AppHeader({ title = "Welcome to Infinitas", breadcrumbItems }: AppHeaderProps) {
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2">
+    <header className="flex h-16 shrink-0 gap-2 pt-[18px]">
       <div className="flex items-center gap-2 px-4 flex-1">
         <SidebarTrigger className="-ml-1" />
         <Separator
