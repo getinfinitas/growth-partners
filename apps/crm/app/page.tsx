@@ -8,7 +8,7 @@ import {
 export default function Page() {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar variant="floating" />
       <SidebarInset className="@container/content h-svh">
         <AppHeader 
           breadcrumbItems={[
