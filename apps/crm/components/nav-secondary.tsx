@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { ChevronRight, type LucideIcon } from "lucide-react"
+import { IconChevronRight } from "@tabler/icons-react"
+import type { Icon as TablerIcon } from "@tabler/icons-react"
 
 import {
   SidebarGroup,
