@@ -1,3 +1,4 @@
+import * as React from "react"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -38,7 +39,7 @@ export function AppHeader({ title = "Welcome to Infinitas", breadcrumbItems }: A
               </BreadcrumbLink>
             </BreadcrumbItem>
             {breadcrumbItems.map((item, index) => (
-              <div key={index} className="flex items-center">
+              <React.Fragment key={index}>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
                   {item.isPage ? (
@@ -49,7 +50,7 @@ export function AppHeader({ title = "Welcome to Infinitas", breadcrumbItems }: A
                     </BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
-              </div>
+              </React.Fragment>
             ))}
           </BreadcrumbList>
         </Breadcrumb>
