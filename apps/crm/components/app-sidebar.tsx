@@ -2,17 +2,20 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
-  Settings2,
-  SquareTerminal,
-} from "lucide-react"
+  IconWaveSine,
+  IconBook,
+  IconRobot,
+  IconTerminal2,
+  IconFrame,
+  IconLayoutGrid,
+  IconMap,
+  IconChartPie,
+  IconSettings,
+  IconSquare,
+  IconSettings,
+  IconHelp,
+  IconSearch,
+} from "@tabler/icons-react"
 
 import { NavMain } from "@/components/nav-main"
 import { NavProjects } from "@/components/nav-projects"
@@ -36,37 +39,37 @@ const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: IconLayoutGrid,
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
-      logo: AudioWaveform,
+      logo: IconWaveSine,
       plan: "Startup",
     },
     {
       name: "Evil Corp.",
-      logo: Command,
+      logo: IconSquare,
       plan: "Free",
     },
   ],
   navMain: [
     {
-      title: "Dashboard",
+      title: "Playground",
       url: "#",
-      icon: SquareTerminal,
+      icon: IconTerminal2,
       isActive: true,
       items: [
         {
-          title: "Customers",
+          title: "History",
           url: "#",
         },
         {
-          title: "Projects",
+          title: "Starred",
           url: "#",
         },
         {
-          title: "Calendar",
+          title: "Settings",
           url: "#",
         },
       ],
@@ -74,7 +77,7 @@ const data = {
     {
       title: "Models",
       url: "#",
-      icon: Bot,
+      icon: IconRobot,
       items: [
         {
           title: "Genesis",
@@ -93,7 +96,7 @@ const data = {
     {
       title: "Documentation",
       url: "#",
-      icon: BookOpen,
+      icon: IconBook,
       items: [
         {
           title: "Introduction",
@@ -116,7 +119,7 @@ const data = {
     {
       title: "Settings",
       url: "#",
-      icon: Settings2,
+      icon: IconSettings,
       items: [
         {
           title: "General",
@@ -141,17 +144,17 @@ const data = {
     {
       name: "Design Engineering",
       url: "#",
-      icon: Frame,
+      icon: IconFrame,
     },
     {
       name: "Sales & Marketing",
       url: "#",
-      icon: PieChart,
+      icon: IconChartPie,
     },
     {
       name: "Travel",
       url: "#",
-      icon: Map,
+      icon: IconMap,
     },
   ],
   navSecondary: [
