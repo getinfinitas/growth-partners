@@ -10,7 +10,6 @@ import {
   IconLayoutGrid,
   IconMap,
   IconChartPie,
-  IconSettings,
   IconSquare,
   IconSettings,
   IconHelp,
