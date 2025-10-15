@@ -4,7 +4,7 @@ import * as React from "react"
 import {
   IconWaveSine,
   IconBook,
-  IconRobot,
+  IconBrandGithubCopilot,
   IconTerminal2,
   IconFrame,
   IconLayoutGrid,
@@ -75,9 +75,9 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Automations",
       url: "#",
-      icon: IconRobot,
+      icon: IconBrandGithubCopilot,
       items: [
         {
           title: "Genesis",
