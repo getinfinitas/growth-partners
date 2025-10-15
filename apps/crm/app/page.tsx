@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <SidebarProvider>
       <AppSidebar variant="floating" />
-      <SidebarInset className="@container/content h-svh">
+      <SidebarInset>
         <AppHeader 
           breadcrumbItems={[
             { title: "Business Profile Setup", isPage: true }
@@ -27,3 +27,4 @@ export default function Page() {
     </SidebarProvider>
   )
 }
+
