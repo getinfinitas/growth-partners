@@ -89,7 +89,7 @@ export function Notifications({
           className="relative h-8 w-8"
           aria-label={`Notifications ${unreadCount > 0 ? `(${unreadCount} unread)` : ''}`}
         >
-          <IconBell className="h-6 w-6" />
+          <IconBell className="h-8 w-8" />
           {unreadCount > 0 && (
             <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-destructive text-destructive-foreground text-xs font-medium flex items-center justify-center">
               {unreadCount > 99 ? '9+' : unreadCount}
