@@ -86,7 +86,7 @@ export function Notifications({
         <Button
           variant="ghost"
           size="icon"
-          className="relative h-7 w-7"
+          className="relative h-12 w-12"
           aria-label={`Notifications ${unreadCount > 0 ? `(${unreadCount} unread)` : ''}`}
         >
           <IconBell className="h-4 w-4" />
